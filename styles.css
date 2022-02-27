@@ -1,0 +1,138 @@
+*, *.after, *.before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lavender;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.head {
+    width: 300px;
+    height: 340px;
+    border-radius: 70% 70% 100% 100%;
+    background-color:rgba(168, 118, 102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eyes, .brows, .ears {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.ears {
+    min-width: 350px !important;
+    z-index: -1;
+}
+
+.eye {
+    width: 85px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #ffffcb;
+    margin: 10px;
+    margin: 10px 0 10px;
+    border-top: 10px solid rgb(139, 86, 48);
+    border-bottom: 3px solid rgb(139, 86, 48);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.eye::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: saddlebrown;
+    border-radius: 100%;
+    position: absolute;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.eye::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.brow {
+    width: 85px;
+    height: 22px;
+    margin-bottom: 70px;
+    border-top: 7px solid black;
+    border-radius: 100%;
+    position: relative;
+}
+
+.nose {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgb(139, 86, 48);
+    position: absolute;
+    border-radius: 0 0 100% 100%;
+    transform: translateY(50px);
+    border-top: none;
+}
+
+.mouth {
+    width: 100px;
+    height: 40px;
+    border: 10px solid rgb(139, 86, 48);
+    position: absolute;
+    border-radius:100%;
+    transform: translateY(120px);
+    background-color: aliceblue;
+}
+
+.ear {
+    width: 50px;
+    height: 100px;
+}
+
+.ear:first-child, .ear {
+    border-radius: 100px 0 0 100%;
+    background-color: rgba(168, 118, 102);
+}
+
+.ear:last-child, .ear {
+    border-radius: 0 100% 100% 0;
+}
+
+.hair {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    border-radius: 100% 100% 0 0;
+    transform: translateY(-160px);
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hair::before {
+    content: '';
+    width: 85px;
+    height: 15px;
+    margin-bottom: 70px;
+    border-top: 7px solid rgb(80, 80, 190);
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(4) translateY(38px);
+}
